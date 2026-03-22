@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import SearchBar from "./SearchBar";
+import UserProfileCard from "./UserProfileCard";
 
 const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
-      
+
       {/* Logo */}
       <Link to="/" className="text-2xl font-bold text-blue-600">
-      <img src="" alt="smartstay" className="w-15 h-15"/>
+        <img src="" alt="smartstay" className="w-15 h-15" />
         SmartStay
       </Link>
 
@@ -41,6 +43,8 @@ const NavBar = () => {
             Login
           </button>
         )}
+        <SearchBar />
+        <UserProfileCard />
       </div>
     </nav>
   );

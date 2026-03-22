@@ -1,7 +1,8 @@
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../Context/AuthContext";
+
 
 const UserProfileCard = () => {
-  const { user, login, logout } = useAuth();
+  const { user, login, logout } =useAuth();
 
   return (
     <div className="flex items-center gap-3">
@@ -10,6 +11,7 @@ const UserProfileCard = () => {
         <>
           {/* Avatar */}
           <div className="w-8 h-8 bg-black text-white flex items-center justify-center rounded-full">
+            <img src="https://i.pravatar.cc/40" className="rounded-full" />
             {user.name[0].toUpperCase()}
           </div>
 
