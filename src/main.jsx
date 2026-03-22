@@ -11,12 +11,12 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
-    
-    <FavoritesProvider>
-      <FilterProvider>
-      <App />
-      </FilterProvider>
-    </FavoritesProvider>
-   
-  </QueryClientProvider>
+  <AuthProvider>
+    <FilterProvider>
+      <FavoritesProvider>
+        <App />
+      </FavoritesProvider>
+    </FilterProvider>
+  </AuthProvider>
+</QueryClientProvider>
 );
